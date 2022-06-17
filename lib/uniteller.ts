@@ -2,6 +2,7 @@ import shajs from 'sha.js';
 import axios from "axios";
 
 export class UnitellerHelper {
+    private readonly orderId: string;
     private readonly upid: string;
     private readonly login: string;
     private readonly password: string;
@@ -9,12 +10,14 @@ export class UnitellerHelper {
     private readonly debug: boolean;
 
     constructor(
+        orderId: string | null,
         upid: string,
         login: string,
         password: string,
         url: string,
         debug: boolean
     ) {
+        this.orderId = orderId || ''
         this.upid = upid
         this.login = login;
         this.password = password
