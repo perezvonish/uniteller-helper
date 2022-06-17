@@ -1,3 +1,3 @@
-import * as UnitellerHelper from './lib/uniteller'
+import {UnitellerHelper} from "./lib/uniteller";
 
-module.exports = UnitellerHelper
+export {UnitellerHelper}

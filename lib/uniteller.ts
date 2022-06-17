@@ -1,12 +1,7 @@
 import shajs from 'sha.js';
 import axios from "axios";
-import 'dotenv/config'
 
-function init(upid: string, login: string, password: string, url: string, debug: boolean) {
-    return new Uniteller(upid, login, password, url, debug)
-}
-
-export class Uniteller {
+export class UnitellerHelper {
     private readonly upid: string;
     private readonly login: string;
     private readonly password: string;
