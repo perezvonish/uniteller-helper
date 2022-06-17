@@ -2,12 +2,16 @@ import shajs from 'sha.js';
 import axios from "axios";
 import 'dotenv/config'
 
-export default class Uniteller{
-    private upid: string;
-    private login: string;
-    private password: string;
-    private url: string;
-    private debug: boolean;
+function init(upid: string, login: string, password: string, url: string, debug: boolean) {
+    return new Uniteller(upid, login, password, url, debug)
+}
+
+export class Uniteller {
+    private readonly upid: string;
+    private readonly login: string;
+    private readonly password: string;
+    private readonly url: string;
+    private readonly debug: boolean;
 
     constructor(
         upid: string,
