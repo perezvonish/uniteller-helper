@@ -24,7 +24,7 @@ export default class Uniteller{
     }
 
     createPaymentLink(amount: number) {
-        if (amount < 0 || !amount) throw new Error('Amount have not to be zero and must be.')
+        if (amount < 0 || !amount || typeof amount != typeof String) throw new Error('Amount have not to be zero and must be.')
 
         const OrderID = ''
         const UPID = this.upid
